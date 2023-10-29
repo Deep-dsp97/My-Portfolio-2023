@@ -1,0 +1,147 @@
+header {
+  background-color: $cream;
+  padding-bottom: 1rem;
+  .logo-container {
+    width: 90px;
+    height: 90px;
+    background-color: $dark-navy-blue;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  //   Hamburger Menu
+  label {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  label span {
+    background: $dark-navy-blue;
+    border-radius: 10px;
+    height: 5px;
+    margin: 5px 0;
+    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+
+  span:nth-of-type(1) {
+    width: 50%;
+  }
+
+  span:nth-of-type(2) {
+    width: 100%;
+  }
+
+  span:nth-of-type(3) {
+    width: 75%;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(8px, -1px);
+  }
+
+  input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+    transform-origin: top;
+    transform: rotatez(-45deg);
+  }
+
+  input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(23px, -9px) rotatez(45deg);
+  }
+
+  input[type="checkbox"]:checked ~ span {
+    background: red;
+  }
+
+  // mobile menu
+  .burger-menu-bar {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  //   Border bottom
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 16px;
+    right: 0;
+    width: 650px;
+    height: 1px;
+    border-radius: 5px;
+    background: rgba($dark-navy-blue, 1);
+  }
+
+  @media (max-width: 992px) {
+    &::after {
+      width: 400px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &::after {
+      display: none;
+    }
+
+    .burger-menu-bar {
+      display: flex;
+    }
+
+    & > ul {
+      overflow: hidden;
+      flex-direction: column;
+      position: fixed;
+      top: -100%;
+      left: 50%;
+      width: 90%;
+      padding: 20px 60px;
+      border: 1px solid rgba($dark-navy-blue, 0.5);
+      transform: translate(-50%, 0);
+      border-radius: 10px;
+      z-index: 9;
+      opacity: 0;
+      background: $white;
+      box-shadow: 0 8px 6px -6px rgba($dark-navy-blue, 0.5);
+      li {
+        padding: 1rem 0;
+      }
+      transition: all 0.5s ease;
+
+      &::before {
+        content: "";
+        background: url(/public/images/Logo_dark.svg) no-repeat;
+        position: absolute;
+        left: 40px;
+        bottom: -25px;
+        width: 75px;
+        height: 75px;
+        opacity: 0.05;
+        transform: scale(2);
+      }
+    }
+  }
+}
+
+// Mobile Menu active
+.mobile-menu-not-expanded {
+  top: -100%;
+  opacity: 0;
+}
+
+.active-mobile-menu-expanded {
+  top: 112px;
+  opacity: 1;
+}

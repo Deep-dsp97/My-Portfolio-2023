@@ -1,0 +1,10 @@
+.skill-container {
+  li > .skill-block {
+    background: $white;
+    border-radius: 10px;
+
+    img {
+      max-width: 48px;
+    }
+  }
+}

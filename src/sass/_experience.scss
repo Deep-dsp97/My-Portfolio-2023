@@ -1,0 +1,71 @@
+.experience {
+  max-width: 1224px;
+  background: $white;
+  border-radius: 10px;
+
+  .work-tabs {
+    border-left: 1px solid $dark-navy-blue;
+
+    button {
+      border: none;
+      background: none;
+      padding: 12px 20px;
+      text-align: start;
+      transition: all 0.15s ease;
+
+      sup {
+        top: 0;
+        color: $white;
+        // font-size: 10px;
+        padding: 3px 8px;
+        background: $purple;
+      }
+
+      &:hover,
+      &:focus {
+        background: rgba($dark-navy-blue, 0.15);
+        color: $purple;
+        -webkit-text-stroke: 0.8px $dark-navy-blue;
+
+        sup {
+          -webkit-text-stroke: 0px $white;
+        }
+      }
+    }
+  }
+
+  .work-content-block {
+    display: none;
+    transition: all 0.15s ease;
+    // position: absolute;
+    // top: 0;
+  }
+
+  .role-responsibility {
+    position: relative;
+    padding-left: 30px;
+    & > p::before {
+      content: "\2617";
+      color: $purple;
+      position: absolute;
+      // top: 0;
+      left: 0;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.active-work-tab {
+  background: rgba($dark-navy-blue, 0.15) !important;
+  color: $purple;
+  -webkit-text-stroke: 0.8px $dark-navy-blue;
+
+  sup {
+    -webkit-text-stroke: 0px $white;
+  }
+}
+
+.active-work-content {
+  opacity: 1 !important;
+  display: block !important;
+}

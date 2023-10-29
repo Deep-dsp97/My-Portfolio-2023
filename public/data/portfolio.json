@@ -1,0 +1,27 @@
+[
+  {
+    "image": "portfolio",
+    "title": "Web portfolio 2023",
+    "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quia deserunt ipsam hic, sit repudiandae consectetur architecto qui autem a ullam, esse quidem beatae fugiat provident inventore. Recusandae, consequatur qui?",
+    "technology": [
+      "Scss",
+      "Bootstrap",
+      "ReactJs",
+      "Axios",
+      "Wordpress",
+      "Headless CMS"
+    ],
+    "live": "http://ipaddlocator.netlify.app/",
+    "repo": "https://github.com/Deep-dsp/ip-locator",
+    "iac": "https://www.iacaward.org/iac/winner/18638/the-branding-firm-inc--wins-2023-iac-award-for-setting-the-stage-for-success.html"
+  },
+
+  {
+    "image": "fh",
+    "title": "Forever Homes",
+    "about": "Web app which splits total amount according the number people and how much tip they want to give. Build this project to get some understanding of reactJs structure and hooks",
+    "technology": ["html5", "css3", "Sass", "bootstrap", "ReactJs"],
+    "live": "http://bills-tip-splitter.netlify.app/",
+    "repo": "https://github.com/Deep-dsp/bill-splitter"
+  }
+]

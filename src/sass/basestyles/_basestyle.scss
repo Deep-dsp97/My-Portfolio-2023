@@ -1,0 +1,153 @@
+@import "./fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+
+  // font smoothing
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  background: $cream;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+// margin/padding
+.mt-100 {
+  margin-top: 100px;
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+  }
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 50px;
+  }
+}
+
+//  Max width
+.max-width-1440 {
+  max-width: 1440px;
+}
+
+.max-width-1200 {
+  max-width: 1200px;
+}
+// colors
+
+.dark-navy-blue {
+  color: $dark-navy-blue;
+}
+
+.purple {
+  color: $purple;
+}
+
+.cream {
+  color: $cream;
+}
+
+// Font Family
+
+.poppins {
+  font-family: $poppins;
+}
+
+.montserrat {
+  font-family: $montserrat;
+}
+
+.raleway {
+  font-family: $raleway;
+}
+
+// font weight
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+// Font size
+.h1-font {
+  font-size: $h1-font-szie;
+
+  @media (max-width: 768px) {
+    font-size: 3.5rem;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 2.5rem;
+  }
+}
+
+.h2-font-size {
+  font-size: $h2-font-szie;
+}
+
+.font-size-24 {
+  font-size: $font-24;
+}
+
+.font-size-14 {
+  font-size: $font-14;
+}
+
+.letter-spacing-1px {
+  letter-spacing: 1px;
+}
+
+// btn groups
+.btn-group {
+  margin-left: 4px;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: 1px solid $purple;
+  // border-radius: 5px;
+  transition: all 0.15s ease;
+  padding: 12px 60px;
+
+  @media (max-width: 576px) {
+    padding: 12px 30px;
+    font-size: 12px;
+  }
+}
+
+.primary-btn {
+  &:hover,
+  &:focus {
+    background: $purple;
+    color: $white;
+  }
+}
+
+.secondary-btn {
+  background: $purple;
+  color: $white;
+  &:hover,
+  &:focus {
+    background: rgba($purple, 0);
+    color: $purple;
+  }
+}
+
+// Block - Visual Impact Mobile

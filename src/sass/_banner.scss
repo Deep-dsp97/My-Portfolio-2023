@@ -1,0 +1,41 @@
+.banner {
+  height: calc(100vh - 112px);
+  position: relative;
+  bottom: 50px;
+  background: url(/public/images/code.svg) no-repeat;
+  background-position: 90% bottom;
+  background-size: contain;
+  h1 {
+    font-size: 0;
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+  p:not(:nth-child(3)) {
+    margin-left: 4px;
+  }
+
+  p.montserrat {
+    line-height: 40px;
+  }
+
+  @media (min-width: 992px) {
+    // left: 15%;
+
+    p.montserrat {
+      line-height: 60px;
+    }
+  }
+}
+
+// About page
+.deep-image {
+  max-width: 500px;
+}

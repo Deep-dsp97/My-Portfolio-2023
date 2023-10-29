@@ -1,0 +1,16 @@
+.portfolio-container {
+  .image-block img {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    border-radius: 20px;
+  }
+  .tech-ul li {
+    background: rgba($purple, 0.8);
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+  }
+
+  .gif-container img {
+    max-width: 90px;
+  }
+}
